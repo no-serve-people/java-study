@@ -2,7 +2,7 @@ package com.tracenull.thread;
 
 import java.util.concurrent.*;
 
-public class CallableDemo {
+public class FutureDemo {
     public static void main(String[] args) {
         ExecutorService executorService = Executors.newCachedThreadPool();
 
