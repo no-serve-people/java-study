@@ -13,7 +13,8 @@ public class SynchronizedMethod {
 //        IntStream.range(0, 1000).forEach(count -> service.submit(summation::calculate));
 //
         for (int i = 0; i < 1000; i++) {
-            service.execute(summation::calculate);
+//            service.execute(summation::synchronizedCalculate);
+            service.submit(Test::synchronizedCalculate);
 //            new Thread(summation::calculate).start();
         }
         service.awaitTermination(1000, TimeUnit.MILLISECONDS);
@@ -22,7 +23,7 @@ public class SynchronizedMethod {
 }
 
 class Test {
-    private int sum;
+    private static int sum;
 
     public int getSum() {
         return sum;
@@ -36,5 +37,21 @@ class Test {
         setSum(getSum() + 1);
     }
 
+    public synchronized static void synchronizedCalculate() {
+//        setSum(getSum() + 1);
+        sum =sum+1;
+    }
+
+    public void synchronisedThis() {
+        synchronized (this) {
+            setSum(getSum() + 1);
+        }
+    }
+
+    public static void synchronisedThisClass() {
+        synchronized (Test.class) {
+            sum = sum + 1;
+        }
+    }
 }
 
