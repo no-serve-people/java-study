@@ -10,8 +10,12 @@ public class SynchronizedMethod {
     public static void main(String[] args) throws InterruptedException {
         ExecutorService service = Executors.newFixedThreadPool(3);
         Test summation = new Test();
-        IntStream.range(0, 1000).forEach(count -> service.submit(summation::calculate));
-
+//        IntStream.range(0, 1000).forEach(count -> service.submit(summation::calculate));
+//
+        for (int i = 0; i < 1000; i++) {
+            service.execute(summation::calculate);
+//            new Thread(summation::calculate).start();
+        }
         service.awaitTermination(1000, TimeUnit.MILLISECONDS);
         System.out.println(summation.getSum());
     }
