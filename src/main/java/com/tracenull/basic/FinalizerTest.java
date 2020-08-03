@@ -1,6 +1,5 @@
 package com.tracenull.basic;
 
-import sun.nio.cs.US_ASCII;
 
 class User {
     public static User user = null;
