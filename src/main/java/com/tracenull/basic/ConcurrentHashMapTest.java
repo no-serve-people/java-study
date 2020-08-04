@@ -10,7 +10,7 @@ public class ConcurrentHashMapTest {
         System.out.println("第一次获取why=" + why);
 //        String test = map.computeIfAbsent("why", key -> getValue());
 //        System.out.println(test);
-        String test2=map.computeIfAbsent("AaAa", key -> {
+        String test2 = map.computeIfAbsent("AaAa", key -> {
             return map.computeIfAbsent("BbBb", key2 -> String.valueOf(42));
         });
         System.out.println(map);
