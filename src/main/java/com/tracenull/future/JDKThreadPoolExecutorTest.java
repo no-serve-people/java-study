@@ -1,6 +1,5 @@
 package com.tracenull.future;
 
-import org.omg.CORBA.TIMEOUT;
 
 import java.util.concurrent.*;
 import java.util.concurrent.atomic.AtomicInteger;
