@@ -35,6 +35,12 @@
             <artifactId>lettuce-core</artifactId>
             <version>5.3.3.RELEASE</version>
         </dependency>
+        <dependency>
+            <groupId>cglib</groupId>
+            <artifactId>cglib-nodep</artifactId>
+            <version>3.3.0</version>
+<!--            <scope>test</scope>-->
+        </dependency>
     </dependencies>
     <build>
         <plugins>
