@@ -10,8 +10,8 @@ public class Ques1021 {
         Ques1021 ques1021 = new Ques1021();
         ques1021.method01("test", 0);
         ques1021.method01("test", "tttt");
-        ques1021.method01("test");
-        ques1021.method01("test", null);
+//        ques1021.method01("test");
+//        ques1021.method01("test", null);
     }
 
     public void method01(String s, Integer... i){}
