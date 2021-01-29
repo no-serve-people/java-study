@@ -8,9 +8,8 @@ import java.util.List;
  */
 public class Ques1014 {
     public static void main(String[] args) {
-        int[] data = {1, 2, 3};
-        List list = Arrays.asList(data);
-//        List list = Arrays.asList(1, 2, 3);
-        System.out.println("列表的元素数量是：" + list.size());
+        int[] arr = {1, 2, 3};
+        List list = Arrays.asList(arr);
+        System.out.println("list's size is：" + list.size());
     }
 }
